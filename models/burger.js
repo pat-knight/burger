@@ -7,14 +7,16 @@ const burger = {
             cb(res);
         });
     }, 
-    create: () => {
-        orm.insertOne
+    create: (name, cb) => {
+        orm.insertOne('burgers', name, res => {
+            cb(res);
+        });
     },
-    update: () => {
-        orm.updateOne
+    update: (obj, condition, cb) => {
+        orm.updateOne('burgers', obj, condition, res => {
+            cb(res);
+        });
     },
-    //create
-    //update
 };
 
 module.exports = Burger;
