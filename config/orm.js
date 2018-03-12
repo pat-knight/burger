@@ -1,4 +1,4 @@
-const connection = require('/connection.js');
+const connection = require('./connection.js');
 
 function format(obj) {
     let arr = [];

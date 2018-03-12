@@ -1,4 +1,5 @@
 const connection = require("./config/connection");
+const routes = require("./controllers/burgersController");
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -10,10 +11,12 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(__dirname + '/public'));
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+app.use(routes);
 
 app.listen(PORT, () => {
 console.log(`app listening on port ${PORT}`);

@@ -1,1 +1,1 @@
-insert into burgers (burger_name, devoured) values ('burger', false);
+insert into burgers (burger_name, devoured) values ('Kales From the Crypt Burger', false);
