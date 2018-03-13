@@ -22,15 +22,15 @@ const orm = {
             cb(result);
         });
     },
-    insertOne: (table, name, cb) => {
-        const query = `insert into burgers values ('${name}')`
+    insertOne: (table, col, val, cb) => {
+        const query = `insert into ${table} (${col.toString()}) values ('${val}')`
         connection.query(query, (err, result) => {
             if (err) throw err;
             cb(result);
         });
     },
     updateOne: (table, obj, condition, cb) => {
-        const query = `update ${table} set ${format(obj)} where ${condition}}`;
+        const query = `update ${table} set ${format(obj)} where ${condition}`;
         connection.query(query, (err, result) => {
             if (err) throw err;
             cb(result);

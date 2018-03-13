@@ -1,3 +1,6 @@
-body {
-    background: blue;
+.burger-menu {
+    float: left;
+}
+.devoured-burgers {
+    float: right;
 }
