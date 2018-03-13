@@ -1,5 +1,8 @@
 body {
     background-image: url('./burger.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .burger-menu {
@@ -16,4 +19,5 @@ body {
 
 .burger-list{
     margin: 5px;
+    color: #fff;
 }

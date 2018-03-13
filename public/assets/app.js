@@ -13,8 +13,7 @@
                     console.log(result);
                     location.reload();
                 }
-            })
-            // }).then(data => location.reload());
+            });
         });
 
         $(".devour").on("click", e => {

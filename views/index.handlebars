@@ -1,35 +1,22 @@
 <div class="container">
     <header class="text-center">
-  <div class="jumbotron mainBanner">
-    <h1>Eat Da Burger!</h1>
-  </div>
-</header>
+        <h1>Burger House</h1>
+    </header>
     <div class="row">
         <div class="col">
             <div class="burger-menu">
-            <h3>Burger Menu</h3>
-                {{#each burgers}} 
-                {{#unless devoured}} 
-                  {{> sort_burger devoured=true}} 
-                {{/unless}} 
-                {{/each}}
+                <h3>Burger Menu</h3>
+                {{#each burgers}} {{#unless devoured}} {{> sort_burger devoured=true}} {{/unless}} {{/each}}
             </div>
         </div>
         <div class="col">
             <div class="devoured-burgers">
-            <h3>Devoured Burgers</h3>
+                <h3>Devoured Burgers</h3>
                 <ul>
-                    {{#each burgers}} 
-                    {{#if devoured}} 
-                    {{> sort_burger devoured=false}} 
-                    {{/if}} 
-                    {{/each}}
+                    {{#each burgers}} {{#if devoured}} {{> sort_burger devoured=false}} {{/if}} {{/each}}
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="row">
-        
     </div>
     <div class="row add-section">
         <div class="col">
@@ -42,5 +29,5 @@
             </div>
         </div>
     </div>
-    
+
 </div>
