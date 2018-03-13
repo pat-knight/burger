@@ -1,9 +1,10 @@
 const mysql = require("mysql");
+const connection;
 
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-  const connection = mysql.createConnection({
+  connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
@@ -16,4 +17,5 @@ connection.connect(err => {
   console.log(`connected as id ${connection.threadId}`);
 });
 
+connection.connect();
 module.exports = connection;
