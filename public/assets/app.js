@@ -3,12 +3,18 @@
         $('#addNew').on('click', e => {
             e.preventDefault();
             let data = {
-                burger_name: $('#newBurger').val()
+                burger_name: $('#burger-name').val()
             };
-            $.ajax('/api/burgers', {
+            console.log(data)
+            $.ajax('api/burgers', {
                 type: 'POST',
                 data: data,
-            }).then(data => location.reload());
+                success: result => {
+                    console.log(result);
+                    location.reload();
+                }
+            })
+            // }).then(data => location.reload());
         });
 
         $(".devour").on("click", e => {
